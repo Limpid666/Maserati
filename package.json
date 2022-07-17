@@ -51,9 +51,5 @@
       "eslint --fix",
       "git add"
     ]
-  },
-  "parserOptions": {
-    "parser": "@babel/eslint-parser",
-    "requireConfigFile": false
   }
 }
