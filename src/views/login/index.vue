@@ -24,7 +24,7 @@
               <el-input v-model="loginForm.username" :prefix-icon="User" placeholder="请输入用户名" />
             </el-form-item>
             <el-form-item>
-              <el-input v-model="loginForm.passwprd" :prefix-icon="Unlock" placeholder="请输入密码" />
+              <el-input v-model="loginForm.passwprd" :prefix-icon="Unlock" placeholder="请输入密码" type="password" />
             </el-form-item>
             <el-form-item>
               <el-button @click="onSubmit">登录</el-button>
@@ -55,7 +55,6 @@ const loginRules = reactive({
 const router = useRouter()
 const store = useStore()
 const loginFromRef = ref(null)
-// const loading = ref(false)
 
 const onSubmit = () => {
   if (!loginFromRef.value) return
@@ -68,7 +67,6 @@ const onSubmit = () => {
     }
   })
 }
-console.log(onSubmit)
 </script>
 <style scoped lang='scss'>
 .login {

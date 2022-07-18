@@ -1,8 +1,7 @@
 /* 澈澈 */
 <template>
   <div>
-    <!-- 主页布局 -->
-    主页布局
+    <router-view></router-view>
   </div>
 </template>
 <script setup>
