@@ -8,6 +8,8 @@ import './styles/index.scss'
 import './iconfont/iconfont.css'
 import installIcons from './icons/index'
 
+import '@/permission'
+
 import App from './App.vue'
 import router from './router'
 import store from './store'

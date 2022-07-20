@@ -1,10 +1,17 @@
 import axios from 'axios'
+import store from '@/store'
 const service = axios.create({
   baseURL: process.env.VUE_APP_BASE_API,
   timeout: 5000
 })
 service.interceptors.request.use(
   function (config) {
+    console.log(1)
+    const token = store.getters.token
+    console.log(token)
+    if (token) {
+      config.headers.token = token
+    }
     return config
   },
   function (error) {
@@ -20,8 +27,8 @@ service.interceptors.response.use(
   }
 )
 const request = (options) => {
-  if (options.method.toLocaleLowerCase() === 'get') {
-    options.params = options.data || {}
+  if (options.method.toLowerCase() === 'get') {
+    options.params = options.data
   }
   return service(options)
 }

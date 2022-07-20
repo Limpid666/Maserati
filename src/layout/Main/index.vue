@@ -1,6 +1,6 @@
 /* 澈澈 */
 <template>
-  <div>
+  <div class="main">
     <router-view></router-view>
   </div>
 </template>
@@ -8,4 +8,9 @@
 
 </script>
 <style scoped lang='scss'>
+.main{
+  background-color: #f3f4f6;
+  height: calc(100vh - 65px);
+  width: 100%;
+}
 </style>

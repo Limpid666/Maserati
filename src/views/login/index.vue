@@ -43,7 +43,7 @@ import { useRouter } from 'vue-router'
 
 const loginForm = reactive({
   username: 'admin',
-  passwprd: 'admin'
+  password: 'admin'
 })
 
 const loginRules = reactive({
@@ -63,7 +63,7 @@ const onSubmit = () => {
       console.log(valid)
       const res = await store.dispatch('user/login', loginForm)
       console.log(res)
-      router.push('/')
+      router.push('/home')
     }
   })
 }
